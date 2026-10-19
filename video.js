@@ -137,3 +137,47 @@ window.addEventListener('pagehide', () => window.clearTimeout(revealTimer));
   setTimeout(showNext, 1800);
   setInterval(showNext, 9000);
 })();
+
+/* ===== PREMIUM FOCUS-ZOOM FAQ ===== */
+(() => {
+  const faqList = document.querySelector(".faq-list");
+  if (!faqList) return;
+
+  const questions = faqList.querySelectorAll(".faq-question");
+
+  questions.forEach((button) => {
+    button.addEventListener("click", () => {
+      const answer = document.getElementById(
+        button.getAttribute("aria-controls")
+      );
+      const item = button.closest(".faq-item");
+
+      if (!answer || !item) return;
+
+      const wasOpen = button.getAttribute("aria-expanded") === "true";
+
+      // Sabhi FAQ answers band karo
+      questions.forEach((otherButton) => {
+        const otherAnswer = document.getElementById(
+          otherButton.getAttribute("aria-controls")
+        );
+        const otherItem = otherButton.closest(".faq-item");
+
+        otherButton.setAttribute("aria-expanded", "false");
+        if (otherAnswer) otherAnswer.hidden = true;
+        if (otherItem) otherItem.classList.remove("is-open");
+      });
+
+      if (wasOpen) {
+        // Khule FAQ par dobara click: sab normal
+        faqList.classList.remove("has-active");
+      } else {
+        // Selected FAQ open aur zoom-in
+        button.setAttribute("aria-expanded", "true");
+        answer.hidden = false;
+        item.classList.add("is-open");
+        faqList.classList.add("has-active");
+      }
+    });
+  });
+})();
