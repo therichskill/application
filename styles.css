@@ -197,7 +197,7 @@ h2 { margin: 0; font-size: 14px; letter-spacing: -.3px; }
 .faq-question { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 19px; border: 0; color: #f6f5ff; background: transparent; text-align: left; font: 700 15px/1.55 Arial, sans-serif; cursor: pointer; }
 .faq-question:focus-visible, .registration-toast button:focus-visible { outline: 2px solid #c6b4ff; outline-offset: 3px; }
 .faq-icon { display: grid; place-items: center; flex: 0 0 29px; width: 29px; height: 29px; color: #fff; background: #8b69df30; border: 1px solid #aa8cff78; border-radius: 50%; font-size: 21px; font-weight: 400; line-height: 1; }
-.faq-answer { overflow: hidden; max-height: 0; transition: max-height .32s ease; }
+.faq-answer { overflow: hidden; max-height: 0; transition: max-height .8s ease; }
 .faq-answer[hidden] { display: none; }
 .faq-answer p { margin: 0; padding: 0 19px 19px; color: #c6cce3; font-size: 14px; line-height: 1.8; }
 .saved-registrations { max-width: 850px; margin: 28px auto; padding: 20px; background: #141a36; border: 1px solid #8d70dc55; border-radius: 16px; }
@@ -383,9 +383,9 @@ h2 { margin: 0; font-size: 14px; letter-spacing: -.3px; }
   filter: blur(0);
   opacity: 1;
   transition:
-    transform 0.4s cubic-bezier(.2,.8,.2,1),
-    filter 0.4s ease,
-    opacity 0.4s ease,
+    transform 0.9s cubic-bezier(.2,.8,.2,1),
+    filter 0.9s ease,
+    opacity 0.9s ease,
     box-shadow 0.4s ease,
     border-color 0.4s ease;
 }
@@ -412,7 +412,7 @@ h2 { margin: 0; font-size: 14px; letter-spacing: -.3px; }
 /* Plus icon ka smooth zoom */
 .faq-icon {
   transition:
-    transform 0.35s ease,
+    transform 0.8s ease,
     background 0.35s ease,
     color 0.35s ease,
     box-shadow 0.35s ease;
