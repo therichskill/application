@@ -334,3 +334,38 @@ h2 { margin: 0; font-size: 14px; letter-spacing: -.3px; }
     font-size: 14px;
   }
 }
+
+/* FAQ ANSWER FULL VISIBILITY FIX */
+.faq-answer,
+.faq-answer[hidden] {
+  display: block !important;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  opacity: 1;
+  visibility: visible;
+  padding: 0;
+  transition: none;
+}
+
+.faq-answer[hidden] {
+  display: none !important;
+}
+
+.faq-answer > p {
+  display: block;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  padding: 0 20px 20px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .faq-answer > p {
+    padding: 0 16px 17px;
+  }
+}
