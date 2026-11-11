@@ -1,0 +1,110 @@
+/* GLASSMORPHISM THEME — layered translucent glass, ambient gradients and soft reflections */
+:root {
+  color-scheme: dark;
+  --bg: #080d19;
+  --panel: rgba(22, 31, 53, .54);
+  --muted: #b7c3d8;
+  --accent: #79e5f2;
+  --white: #f4f8ff;
+  --purple: #b49aff;
+  --glass-border: rgba(211, 230, 255, .17);
+  --glass-fill: rgba(255,255,255,.065);
+}
+html { background: var(--bg); }
+body {
+  position: relative;
+  isolation: isolate;
+  color: var(--white);
+  background: radial-gradient(ellipse at 12% 12%, rgba(69,108,190,.24), transparent 34%),
+              radial-gradient(ellipse at 88% 28%, rgba(131,82,205,.23), transparent 35%),
+              radial-gradient(ellipse at 50% 100%, rgba(44,155,178,.12), transparent 42%), #080d19;
+  background-attachment: fixed;
+}
+body::before, body::after {
+  content: ""; position: fixed; z-index: -1; pointer-events: none; border-radius: 50%;
+  filter: blur(75px); opacity: .28;
+}
+body::before { width: 260px; height: 260px; top: 8%; left: -110px; background: #397de0; }
+body::after { width: 300px; height: 300px; right: -130px; bottom: 5%; background: #854bd1; }
+.topbar {
+  position: relative; z-index: 2; height: 58px; margin: 12px auto 0; padding: 0 18px;
+  max-width: 1180px; border: 1px solid var(--glass-border); border-radius: 18px;
+  background: rgba(255,255,255,.055); backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%); box-shadow: 0 10px 35px rgba(0,0,0,.18), inset 0 1px rgba(255,255,255,.1);
+}
+.brand-mark { color: #081321; background: linear-gradient(135deg,#a8f4ff,#a995ff); border-radius: 7px; box-shadow: 0 0 20px rgba(121,229,242,.3); }
+.live-label { color: #dbe8ff; }
+.live-dot { box-shadow: 0 0 12px #fa657c, 0 0 24px #fa657c66; }
+.countdown, .form-card, .journey-card, .confirmation-card, .transparency-note, .review-card,
+.faq-section, .faq-item, .feedback-card, .saved-registrations, .registration-toast, .toast,
+.site-footer, .footer-inner {
+  background: linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.035)) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 18px 55px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.13), inset 0 -1px 0 rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(24px) saturate(145%); -webkit-backdrop-filter: blur(24px) saturate(145%);
+}
+.countdown { border-radius: 14px; color: #eaf3ff; }
+.countdown strong { color: #ff9ab0; }
+.hero { max-width: 1180px; }
+.eyebrow, .card-kicker { color: var(--accent); }
+.eyebrow span { background: linear-gradient(90deg,var(--accent),var(--purple)); }
+h1 span, .journey-title span, .reviews-title span, .refund-promise span, .faq-title span { 
+  color: transparent !important; background: linear-gradient(100deg,#8beaff 0%,#b6a0ff 52%,#f0a8dd 100%);
+  -webkit-background-clip: text; background-clip: text;
+}
+.intro, .journey-intro, .reviews-subtitle, .form-subtitle { color: var(--muted); }
+.form-card { border-radius: 22px; padding: 24px; }
+.edit-icon { color: #d7caff; border-color: rgba(190,171,255,.4); background: rgba(180,154,255,.1); }
+.form-subtitle { border-bottom-color: rgba(220,235,255,.13); }
+.field input, .field select {
+  color: #f4f8ff; background: rgba(4,10,22,.38); border: 1px solid rgba(201,222,255,.19);
+  border-radius: 11px; box-shadow: inset 0 2px 8px rgba(0,0,0,.16); transition: border-color .2s, box-shadow .2s, background .2s;
+}
+.field input:focus, .field select:focus { border-color: rgba(121,229,242,.8); background: rgba(22,39,61,.58); box-shadow: 0 0 0 3px rgba(121,229,242,.12), 0 0 22px rgba(121,229,242,.12); }
+.field select option { background: #111a2d; color: white; }
+.submit-button, .glow-button, .review-arrow, .back-button, .ask-button, .review-dot {
+  border: 1px solid rgba(220,235,255,.23) !important; border-radius: 999px !important;
+  color: #f7faff !important; background: linear-gradient(135deg,rgba(255,255,255,.19),rgba(255,255,255,.055)) !important;
+  box-shadow: 0 9px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.24), inset 0 -1px 0 rgba(255,255,255,.05) !important;
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.submit-button { min-height: 42px; height: auto; font-size: 13px; background: linear-gradient(110deg,rgba(83,191,214,.38),rgba(151,117,226,.4)) !important; }
+.glow-button { min-height: 48px; }
+.watch-button, .interested-button, #watchedYes, .ask-button { background: linear-gradient(110deg,rgba(72,173,207,.48),rgba(143,112,222,.48)) !important; }
+.skip-button, .not-interested-button, #watchedNo { background: rgba(255,255,255,.09) !important; color: #e9edff !important; }
+.submit-button:hover, .glow-button:hover, .review-arrow:hover, .back-button:hover, .ask-button:hover {
+  transform: translateY(-2px); border-color: rgba(160,225,255,.55) !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.3), 0 0 24px rgba(121,229,242,.13), inset 0 1px 0 rgba(255,255,255,.3) !important;
+}
+.video-frame { padding: 9px; border-radius: 20px; border: 1px solid rgba(148,208,255,.32); background: rgba(255,255,255,.055); box-shadow: 0 18px 45px rgba(0,0,0,.3), inset 0 1px rgba(255,255,255,.14); }
+.video-player { border-radius: 13px; }
+.video-prompt { color: #9ceaf4; text-shadow: 0 0 14px rgba(121,229,242,.35); }
+.review-card { border-radius: 22px; }
+.review-card.is-active { border-color: rgba(151,207,255,.55) !important; box-shadow: 0 22px 55px rgba(0,0,0,.32), 0 0 35px rgba(157,137,255,.16), inset 0 1px rgba(255,255,255,.18) !important; }
+.review-arrow { width: 42px; height: 42px; }
+.review-dot { border: 0 !important; background: rgba(255,255,255,.32) !important; }
+.review-dot.is-active { background: linear-gradient(90deg,#83e8f2,#b49aff) !important; }
+.faq-section { border-radius: 24px; }
+.faq-item { border-radius: 16px; overflow: hidden; }
+.faq-question { color: #f3f7ff; }
+.faq-answer { color: #bdc9df; }
+.transparency-note { border-radius: 16px; }
+.confirmation-overlay { background: rgba(3,7,17,.68); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.confirmation-card { border-radius: 24px; }
+.feedback-mark { color: #091321; background: linear-gradient(135deg,#8beaff,#b49aff); box-shadow: 0 0 28px rgba(121,229,242,.24); }
+.site-footer { border-radius: 24px 24px 0 0; }
+.footer-heading, .footer-brand { color: #edf5ff; }
+.footer-description, .footer-links, .footer-bottom { color: #b6c4db; }
+.refund-promise { text-shadow: 0 8px 30px rgba(0,0,0,.2); }
+.success-message { color: #9af1d5; background: rgba(83,222,179,.09); border: 1px solid rgba(83,222,179,.2); border-radius: 12px; }
+@media (min-width: 1000px) { .topbar { margin-top: 18px; padding: 0 22px; } }
+@media (max-width: 600px) {
+  .topbar { height: 54px; margin-top: 8px; padding: 0 13px; border-radius: 15px; }
+  .form-card { border-radius: 20px; padding: 21px; }
+  .journey-card { border-radius: 22px; }
+  .countdown { border-radius: 13px; }
+  .journey-actions { gap: 10px; }
+  .glow-button { padding: 11px 13px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }

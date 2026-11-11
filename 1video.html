@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10152f" />
+  <title>Your Webinar Video</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="glassmorphism.css" />
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1854718639201518');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1854718639201518&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+ 
+</head>
+<body class="journey-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Webinar home"><span class="brand-mark">W</span><span>WEBINAR</span></a>
+    <span class="live-label"><span class="live-dot"></span> YOUR NEXT STEP</span>
+  </header>
+  <main class="journey-main">
+    <section class="journey-card" aria-labelledby="video-title">
+      <p class="eyebrow journey-eyebrow"><span></span> A SPECIAL MESSAGE FOR YOU</p>
+      <h1 id="video-title" class="journey-title">Ek chhota sa video,<br /><span>ek bada badlav.</span></h1>
+      <p class="journey-intro">Yeh video aapke naye safar ki shuruaat ho sakta hai. Kuch minute dein — ho sakta hai aaj ka yeh faisla aapki soch badal de.</p>
+      <p class="video-prompt"><span aria-hidden="true">↓</span> SEE VIDEO BEFORE SLOT BOOKING</p>
+      <div class="video-frame">
+        <div class="video-player">
+          <img class="video-thumbnail" src="https://img.youtube.com/vi/tWH1_B8Jekk/hqdefault.jpg" alt="Webinar video thumbnail" />
+          <iframe id="journeyVideo" title="Webinar introduction video" src="about:blank" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+        </div>
+        <p class="video-note">.</p>
+      </div>
+
+
+      <div class="journey-actions">
+        <button class="glow-button watch-button" id="watchButton" type="button">▶&nbsp; Watch Video</button>
+        <button class="glow-button skip-button" id="skipButton" type="button">I'm Interested&nbsp; →</button>
+      </div>
+      <p class="timer-note" id="timerNote" role="status"></p>
+      <div class="interest-actions" id="interestActions" hidden>
+        <p>Ab aapka kya faisla hai?</p>
+        <button class="glow-button interested-button" id="interestedButton" type="button">I'm Interested</button>
+        <button class="glow-button not-interested-button" id="notInterestedButton" type="button">I'm Not Interested</button>
+        <aside class="transparency-note" aria-label="Program and refund information">
+          <strong>Honest information</strong>
+          <p>We help members build practical earning skills. Earnings depend on individual effort and are guaranteed.</p>
+          <p>100% Refunds and cashback . In the shared example,.</p>
+        </aside>
+      </div>
+    </section>
+    <section class="reviews-section" aria-labelledby="reviews-title">
+      <p class="eyebrow journey-eyebrow"><span></span> COMMUNITY FEEDBACK</p>
+      <h2 class="reviews-title" id="reviews-title">What Our <span>Students Say</span></h2>
+      <p class="reviews-subtitle">Student feedback and learning experiences</p>
+      <div class="reviews-carousel" aria-roledescription="carousel" aria-label="Student feedback">
+        <div class="reviews-track" id="reviewsTrack">
+          <article class="review-card">
+            <p class="review-quote">The session helped me understand the topic more clearly.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">I learned some useful things that I can apply in practice.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">The concepts were explained in a simple way.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">This gave me a better understanding of where to start.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">The session was informative and easy to follow.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">I got a clearer idea of the next steps to take.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">The examples made the topic easier to understand.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">I found the session useful for my learning journey.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">The content was structured and easy to follow.</p>
+          </article>
+          <article class="review-card">
+            <p class="review-quote">I now have a better understanding of the subject.</p>
+          </article>
+        </div>
+      </div>
+      <div class="reviews-controls">
+        <button class="review-arrow" id="reviewsPrev" type="button" aria-label="Previous review">←</button>
+        <div class="review-dots" id="reviewsDots" aria-label="Choose a review"></div>
+        <button class="review-arrow" id="reviewsNext" type="button" aria-label="Next review">→</button>
+      </div>
+    </section>
+
+    <section class="saved-registrations" aria-labelledby="saved-registrations-title">
+      <h2 id="saved-registrations-title">Recent Registrations <span>(this browser)</span></h2>
+      <p>Names entered on this device appear here. This list is not shared between different visitors.</p>
+      <ul id="registrationNamesList"><li>No registrations saved on this device yet.</li></ul>
+    </section>
+    
+<section class="faq-section" id="faq-section">
+  <p class="eyebrow journey-eyebrow">
+    <span></span> NEED TO KNOW
+  </p>
+
+  <h2 class="faq-title" id="faq-title">
+    Frequently Asked <span>Questions</span>
+  </h2>
+
+  <p class="faq-subtitle">
+    Webinar join karne se pehle apne sawaalon ke jawaab paayein.
+  </p>
+
+  <div class="faq-list">
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-1">
+          <span>01. Is webinar mein kya sikhaya jayega?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-1" hidden>
+        <p>Is webinar mein online earning se jude important steps aur shuru karne ka roadmap samjhaya jayega.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-2">
+          <span>02. Kya earning guaranteed hai?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-2" hidden>
+        <p>Nahi, earning guaranteed nahi hai. Results aapki skills, mehnat, implementation aur doosre factors par depend karte hain.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-3">
+          <span>03. Webinar kitne time ka hoga?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-3" hidden>
+        <p>Webinar ka samay 8 PM se 10 PM hai, yani lagbhag 2 ghante. Agar schedule badle, to participants ko update dena.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-4">
+          <span>04. Registration kaise karun?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-4" hidden>
+        <p>Registration form mein apni sahi details bharein aur submit karein. Aage ke instructions aapko registration ke baad milenge.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-5">
+          <span>05. Help chahiye to contact kaise karun?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-5" hidden>
+        <p>Agar registration mein koi problem aaye, to apne diye gaye official WhatsApp support par message karein.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-6">
+          <span>06. Kya beginners bhi join kar sakte hain?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-6" hidden>
+        <p>Haan, beginners join kar sakte hain. Basic instructions ko dhyan se follow karein aur notes banayein.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-7">
+          <span>07. Refund policy kya hai?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-7" hidden>
+        <p>Refund sirf aapki published refund policy ke rules ke hisaab se milega. Registration se pehle policy zaroor padhein.</p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <h3>
+        <button class="faq-question" type="button"
+          aria-expanded="false" aria-controls="faq-answer-8">
+          <span>08. Webinar join karne ke liye kya chahiye?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-answer-8" hidden>
+        <p>Aapko mobile ya laptop, stable internet connection aur webinar join karne ke instructions ki zaroorat hogi.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <aside class="registration-toast" id="registrationToast" role="status" aria-live="polite" hidden>
+      <span class="toast-dot" aria-hidden="true"></span><span id="registrationToastMessage"></span>
+      <button type="button" id="registrationToastClose" aria-label="Dismiss notification">×</button>
+    </aside>
+
+    <div class="confirmation-overlay" id="watchedModal" role="dialog" aria-modal="true" aria-labelledby="watchedQuestion" hidden>
+      <div class="confirmation-card">
+        <h2 id="watchedQuestion"><span lang="hi">क्या आपने पूरा वीडियो देख लिया है?</span><span lang="en">Have you watched the full video?</span></h2>
+        <div class="confirmation-actions">
+          <button class="glow-button" id="watchedNo" type="button">No</button>
+          <button class="glow-button" id="watchedYes" type="button">Yes</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer scroll-reveal" aria-label="Website footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,38 C180,88 320,0 500,38 S820,82 1000,38 S1280,0 1440,38 L1440,100 L0,100 Z" fill="#6852b5" opacity=".48"/><path d="M0,52 C180,12 320,92 500,52 S820,12 1000,52 S1280,92 1440,52 L1440,100 L0,100 Z" fill="#342f79" opacity=".72"/><path d="M0,66 C180,30 320,96 500,66 S820,30 1000,66 S1280,96 1440,66 L1440,100 L0,100 Z" fill="#10152f"/></svg>
+      <svg class="wave-two" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,38 C180,88 320,0 500,38 S820,82 1000,38 S1280,0 1440,38 L1440,100 L0,100 Z" fill="#7c66d8" opacity=".45"/><path d="M0,52 C180,12 320,92 500,52 S820,12 1000,52 S1280,92 1440,52 L1440,100 L0,100 Z" fill="#352d80"/></svg>
+      <svg class="wave-three" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,38 C180,88 320,0 500,38 S820,82 1000,38 S1280,0 1440,38 L1440,100 L0,100 Z" fill="#59d8c4" opacity=".28"/></svg>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-about">
+        <div class="footer-brand"><span class="footer-brand-mark">W</span><span>WEBINAR</span></div>
+        <p class="footer-description">Learn step by step, ask questions, and make informed decisions. Please review the policies before registering.</p>
+      </div>
+      <div>
+        <h2 class="footer-heading">Quick links</h2>
+        <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="video.html">Webinar details</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="refund-policy.html">Refund Policy</a></li></ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">Connect</h2>
+        <div class="footer-socials" aria-label="Social media links">
+          <a class="footer-social" href="https://www.instagram.com/dev.bwr_?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw==" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.8-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></svg></a>
+          <a class="footer-social" href="https://wa.me/918005564525" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.6A11.8 11.8 0 0 0 20.5 3.5zM12 21a9 9 0 0 1-4.6-1.3l-.3-.2-3.5.9.9-3.4-.2-.4A9 9 0 1 1 12 21zm5-6.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a7.5 7.5 0 0 1-2.2-1.4 8.3 8.3 0 0 1-1.5-1.9c-.2-.3 0-.5.1-.7l.5-.5.3-.6c.1-.2 0-.4 0-.6l-1-2.2c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a11.5 11.5 0 0 0 4.4 3.9c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.2-.3-.5-.4z"/></svg></a>
+          <a class="footer-social" href="https://t.me/" aria-label="Telegram" title="Telegram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 3.2 18.5 20c-.2 1.2-.9 1.5-1.9.9l-5.2-3.8-2.5 2.4c-.3.3-.5.5-1 .5l.4-5.3 9.7-8.8c.4-.4-.1-.6-.6-.2L5.4 13.3.3 11.7c-1.1-.4-1.1-1.1.2-1.6L20.4 2.5c.9-.3 1.7.2 1.4.7z"/></svg></a>
+        </div>
+        <p class="footer-description">Follow us on Instagram or message us on WhatsApp for help.</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="footer-year">2026</span> Webinar. All rights reserved.</span><span>Read our <a href="privacy-policy.html">Privacy Policy</a> and <a href="refund-policy.html">Refund Policy</a>.</span></div>
+  </footer>
+  <script src="video.js"></script>
+  <script src="scroll-reveal.js"></script>
+</body>
+</html>
